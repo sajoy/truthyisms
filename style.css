@@ -1,0 +1,7 @@
+.marble-bench {
+    position: fixed;
+    top: 200px;
+    left: 20px;
+
+    border: dotted red 3px;
+}

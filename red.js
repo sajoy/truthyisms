@@ -11,11 +11,13 @@ if (isEmptyWall()) {
 
     let plaque = document.createElement('div');
     plaque.classList.add('marble-bench');
-    plaque.innerText = 'you will never feel like it';
+    let p = document.createElement('p');
+    p.innerText = 'you will never feel like it';
     
     let url = chrome.extension.getURL('imgs/blackandwhite_small.jpg');
     plaque.style.backgroundImage = `url(${url})`;
 
+    plaque.appendChild(p);
     b.appendChild(plaque);
 
 }

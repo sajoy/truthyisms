@@ -3,7 +3,19 @@ class Truism {
         // TODO pull random truism from text file
         let truism = 'you will never feel like it';
         
-        this.setupElements(truism);
+        let url = chrome.extension.getURL('truisms.json');
+        fetch(url).then(res => {
+            return res.json();
+        }).then(data => {
+            let randomInt = Math.floor(Math.random() * data.length);
+            truism = data[randomInt];
+
+            this.setupElements(truism);
+            
+            // TODO randomize styling
+            this.styleMarble();
+        });
+        
     }
     
     setupElements (truism) {
@@ -12,12 +24,13 @@ class Truism {
         
         this.ele.title = 'Double click to dismiss this truism.';
         this.textEle.innerText = truism;
-
+        
         this.ele.addEventListener('dblclick', e => {
             document.body.removeChild(this.ele);
         });    
-
+        
         this.ele.appendChild(this.textEle);
+        this.addToDom();
     }
 
     addToDom () {        
@@ -36,11 +49,6 @@ class Truism {
 // TODO randomize when to add a truism (~30% of the time?)
 if (isEmptyWall() && shouldAdd()) {
     let truism = new Truism();
-    
-    // TODO randomize styling
-    truism.styleMarble();
-
-    truism.addToDom();
 }
 
 function isEmptyWall () {

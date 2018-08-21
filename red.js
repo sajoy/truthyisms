@@ -34,7 +34,7 @@ class Truism {
 
 
 // TODO randomize when to add a truism (~30% of the time?)
-if (isEmptyWall()) {
+if (isEmptyWall() && shouldAdd()) {
     let truism = new Truism();
     
     // TODO randomize styling
@@ -48,4 +48,9 @@ function isEmptyWall () {
     let bgStyle = bodyStyles.getPropertyValue('background');
 
     return !bgStyle.includes('url');
+}
+
+function shouldAdd () {
+    // be true 30%-ish of the time
+    return Math.floor(Math.random() * Math.floor(10)) < 4;
 }

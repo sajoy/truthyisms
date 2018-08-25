@@ -39,10 +39,31 @@ class Truism {
     addToDom () {        
         document.body.prepend(this.ele);
     }
+
+    styleLED () {
+        // TODO style me!
+        /*
+            - on the left hand side of the site
+            - marquee upwards
+            - circle / dot letter styling (needs font)
+            - red or yellow text on black bg
+
+        */
+    }
+
+    styleProjection () {
+        // TODO style me!
+        /*
+            - gray or white translucent text
+            - overlay on an image 
+
+        */
+    }
     
     styleMarble () {
         this.ele.classList.add('marble-bench');
         
+        // TODO randomize bg marble img
         let url = chrome.extension.getURL('imgs/blackandwhite_small.jpg');
         this.ele.style.backgroundImage = `url(${url})`;
     }

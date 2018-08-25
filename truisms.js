@@ -3,17 +3,24 @@
 
 class Truism {
     constructor () {
-        let url = chrome.extension.getURL('truisms.json');
+        let url = this.getUrl();
         fetch(url).then(res => {
             return res.json();
         }).then(data => {
-            let randomInt = Math.floor(Math.random() * data.length);
-            let truism = data[randomInt];
-
-            this.setupElements(truism);
+            let truism = data[randomInt(0, data.length - 1)];
+            
+            this.setupElements(truism.toUpperCase());
             this.styleElements();
-        });
-        
+        });   
+    }
+    
+    getUrl () {
+        let urls = [
+            chrome.extension.getURL('truisms.json'), // from Jenny Holzer's Truisms
+            chrome.extension.getURL('truthyisms.json') // open source tech-related truthyisms
+        ];
+
+        return urls[randomInt(0, urls.length - 1)];
     }
     
     setupElements (truism) {
@@ -36,7 +43,7 @@ class Truism {
         this.styleMarble();
     }
 
-    addToDom () {        
+    addToDom () {
         document.body.prepend(this.ele);
     }
 
@@ -88,9 +95,13 @@ function isEmptyWall () {
 
 function itsTime () {
     // be true 30%-ish of the time
-    return Math.floor(Math.random() * Math.floor(10)) < 3;
+    let rateOfAppearance = .3;
+    return (randomInt(0, 10) / 10) < rateOfAppearance;
 }
 
+function randomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 
 
@@ -101,4 +112,6 @@ function itsTime () {
 // A SINCERE EFFORT IS ALL YOU CAN ASK
 // --- decides if it's appropriate to add a truism and does so
 
-if (isEmptyWall() && itsTime()) { new Truism() }
+if (isEmptyWall() && itsTime()) { 
+    new Truism();
+}

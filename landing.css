@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, main article, footer article {
+    margin: 0 auto;
+    width: 550px;
+}
+
+main {
+    background-color: lightgray;
+}
+
+footer {
+    background-color: gray;
+}
+
+article {
+    padding: 30px;
+}
+
+#truism {
+    margin: 10% auto;
+    height: 300px;
+    width: 550px;
+    padding: 50px;
+    box-sizing: border-box;
+    background-image: url(imgs/blackandwhite_small.jpg);
+    background-blend-mode: overlay;
+    background-color: rgba(200,200,200,0.7);
+    box-shadow: 3px 4px 11px 0px darkgrey;
+    background-size: cover;
+
+    font-size: 36px !important;
+    text-align: center;
+}
+
+#truism p {
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    margin: 0 auto;
+
+    /* engraved effect from this pen: https://codepen.io/daryl/pen/yAuGj */
+    background-color: #666666;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(245,245,245,.5) 3px 5px 1px;
+}

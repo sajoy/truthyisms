@@ -1,27 +1,75 @@
+html {font-size: 1em;}
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Slabo 27px', serif;
+    line-height: 1.4;
+}
+
+::selection {
+    background: #e16161;
 }
 
 header, main article, footer article {
-    margin: 0 auto;
+    margin: 10% auto;
     width: 550px;
 }
 
-main {
-    background-color: lightgray;
+h1, h2, h3, h4 {
+    font-family: 'Cardo', serif;
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
 }
 
-footer {
-    background-color: gray;
+/* scale made using https://type-scale.com/ */
+
+h1 {
+    margin-top: 0;
+    font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+a {
+    color: #0B4F6C;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #D62828;
+}
+
+ul {
+    font-size: 1.2em;
+}
+
+#splash {
+    width: 100%;
+    border: solid gray 1px;
+    box-sizing: border-box;
+}
+
+#splash img {
+    width: 100%;
 }
 
 article {
     padding: 30px;
 }
 
+footer article {
+    margin: 0 auto;
+}
+
 #truism {
-    margin: 10% auto;
+    margin: 0 auto;
     height: 300px;
     width: 550px;
     padding: 50px;
@@ -33,6 +81,7 @@ article {
     background-size: cover;
 
     font-size: 36px !important;
+    font-family: serif;
     text-align: center;
 }
 

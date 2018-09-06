@@ -1,6 +1,6 @@
 # Holzer Inspiration (WT)
 
-A browser extension that brings Jenny Holzer inspired work to your internet browsing experience.
+A browser extension that brings Jenny Holzer truisms and more to your internet browsing experience.
 
 ## Thoughts
 
@@ -12,9 +12,14 @@ A browser extension that brings Jenny Holzer inspired work to your internet brow
 1. Add an element to a page (randomly selected position, time, etc) that is Holzer-esque in its appearance and statement (or actually use her work).
 1. Appearance: like scrolling LED's or serious engraved plaques or fading and peeling posters or large bright projections.
     1. Decision to make: utilize all styles or stick with one. (Probably start with one.)
+    1. Marble bench
+        1. as header
+    1. projected letters - on images
+    1. LED's down the side?
 1. Statement: short statements about various potentially controversial topics - possibly use hers plus add some that reflect and address more internet related topics
 1. Make it easy to dismiss the work - either through the menu, or on the page.
-
+1. Marble bench breaks some websites:
+    1. gmail, google landing page
 
 ## Links
 1. [Truisms](https://www.cs.utexas.edu/~field/holzer/truisms.txt)

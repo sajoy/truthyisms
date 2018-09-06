@@ -13,14 +13,17 @@ body {
 
 header, main article, footer article {
     margin: 10% auto;
-    width: 550px;
+    max-width: 550px;
 }
+
+header { padding-left: .5em }
 
 h1, h2, h3, h4 {
     font-family: 'Cardo', serif;
     margin: 1.414em 0 0.5em;
     font-weight: inherit;
 }
+
 
 /* scale made using https://type-scale.com/ */
 
@@ -71,7 +74,7 @@ footer article {
 #truism {
     margin: 0 auto;
     height: 300px;
-    width: 550px;
+    max-width: 550px;
     padding: 50px;
     box-sizing: border-box;
     background-image: url(imgs/blackandwhite_small.jpg);

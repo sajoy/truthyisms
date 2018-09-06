@@ -2,6 +2,16 @@
 
 A browser extension that brings Jenny Holzer truisms and more to your internet browsing experience.
 
+## What?
+Truthyisms is a virtual interpretation of Jenny Holzer's Truisms. Truisms were brief, thought-provoking statements printed on posters and distributed around New York City. Statements such as: "AMBIVALENCE CAN RUIN YOUR LIFE", "LACK OF CHARISMA CAN BE FATAL", "TECHNOLOGY WILL MAKE OR BREAK US". This extension is an exploration of the questions: how would that look in the virtual city that is the internet? how can I interrupt you when you're wandering the sidewalks of the world wide web?
+
+For now, it randomly adds Truism and Truism-inspired statements to the websites you visit in the form of engraved marble plaques.
+
+
+- No data is collected or saved.
+- Code is open-source and available on GitHub: https://github.com/sajoy/truthyisms
+
+
 ## Thoughts
 
 1. The internet is a public place, but the experience is very different from being out in a public place.
